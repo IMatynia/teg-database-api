@@ -3,6 +3,9 @@
 This api allows you to conveniently communicate witht the epic gamer api. If you dont know which functions you have 
 access to, you can allways check it at [...]/api/list_funcs
 
+## SQL database setup scripts
+MariaDB scripts with all table, view, function and procedure declarations are available in database setup folder
+
 ## Requirements
 
  - python 3
