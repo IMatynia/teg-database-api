@@ -15,8 +15,7 @@ class EpicGamerApi:
         self._url_root = url_root
 
     def list_funcs(self) -> str:
-        data = {}
-        data["api_key"] = self._api_key
+        data = {"api_key": self._api_key}
         url = f"{self._url_root}list_funcs"
         return requests.get(url, params=data).text
 
@@ -24,7 +23,7 @@ class EpicGamerApi:
         """
         :param model: model to run the method on
         :param method: some method of the model
-        :param data: data to pass to the method ad key-word arguments
+        :param data: data to pass to the method as key-word arguments
         :return: raw server response
         """
         data = data if data else {}
@@ -37,7 +36,7 @@ class EpicGamerApi:
         Calls EpicGamerApi.custom_call on each element of the list in given json file
         :param model: model to run the method on
         :param method: some method of the model
-        :param filename: json file with a list of key-word arument dictionaries
+        :param filename: json file with a list of key-word argument dictionaries
         :param delay: (optional) delay between each request to api
         :return: all responses from all requests
         """
